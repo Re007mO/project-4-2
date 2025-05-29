@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resize Images</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Poetsen+One&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <form id="uploadForm" enctype="multipart/form-data">
+        <label for="imageInput" id="custom-file-upload">Choose (png/jpeg)</label>
+        <span id="choosed"></span>
+        <input id="imageInput" type="file" accept="image/png, image/jpeg" name="image">
+        <input type="submit" id="submit" value="Upload">
+    </form>
+    <div id="imageWindowBefore">
+        <form id="resizeFormUploaded">
+
+
+            <input type="number" name="width" id="imgWidth" placeholder="width" required>
+            <input type="number" name="height" id="imgHeight" placeholder="height" required>
+            <input class="subimg" type="submit" value="Resize">
+        </form>
+    </div>
+
+    <div id="imageWindowAfter"> </div>
+
+    <div id="upload">
+
+        <h1>Resize Again From Gallery</h1>
+        <div id="resizedImg">
+            <form id="resizeFormResized">
+                <div id="galleryResized">
+
+                </div>
+                <input type="number" name="width" id="imgWdth1" placeholder="width" required>
+                <input type="number" name="height" id="imght1" placeholder="height" required>
+                <input class="subimg" type="submit" value="Resize">
+            </form>
+            <div id="displayResized"></div>
+        </div>
+    </div>
+
+    <h1>Or Try Placeholder</h1>
+    <div id="exampleImg">
+        <form id="resizeForm">
+            <div id="gallery">
+                <img name="ex1" class="imgex example" id="ex1" src="/image/pxfuel (1).jpg">
+                <img name="ex2" class="imgex example" id="ex2" src="/image/pxfuel (2).jpg">
+                <img name="ex3" class="imgex example" id="ex3" src="/image/pxfuel (3).jpg">
+            </div>
+            <input type="number" name="width" id="imgWdth" placeholder="width" required>
+            <input type="number" name="height" id="imght" placeholder="height" required>
+            <input class="subimg" type="submit" value="Resize">
+        </form>
+        <div id="display"></div>
+    </div>
+
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
