@@ -16,15 +16,16 @@
     <form id="uploadForm" enctype="multipart/form-data">
         <label for="imageInput" id="custom-file-upload">Choose (png/jpeg)</label>
         <span id="choosed"></span>
-        <input id="imageInput" type="file" accept="image/png, image/jpeg" name="image">
+        <input id="imageInput" type="file" name="image">
         <input type="submit" id="submit" value="Upload">
+        <div id="errorMessage" style="color: red;"></div>
     </form>
     <div id="imageWindowBefore">
         <form id="resizeFormUploaded">
 
 
-            <input type="number" name="width" id="imgWidth" placeholder="width" required>
-            <input type="number" name="height" id="imgHeight" placeholder="height" required>
+            <input  name="width" id="imgWidth" placeholder="width" required>
+            <input  name="height" id="imgHeight" placeholder="height" required>
             <input class="subimg" type="submit" value="Resize">
         </form>
     </div>
